@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Limerick-LightCond';
+  src: url('../fonts/Limerick-LightCond/Limerick-LightCond.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-LightCond/Limerick-LightCond.woff') format('woff'), url('../fonts/Limerick-LightCond/Limerick-LightCond.ttf')  format('truetype'), url('../fonts/Limerick-LightCond/Limerick-LightCond.svg#Limerick-LightCond') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Limerick-MediumCond';
+  src: url('../fonts/Limerick-MediumCond/Limerick-MediumCond.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-MediumCond/Limerick-MediumCond.woff') format('woff'), url('../fonts/Limerick-MediumCond/Limerick-MediumCond.ttf')  format('truetype'), url('../fonts/Limerick-MediumCond/Limerick-MediumCond.svg#Limerick-MediumCond') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Limerick-ExtraBold';
+  src: url('../fonts/Limerick-ExtraBold/Limerick-ExtraBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-ExtraBold/Limerick-ExtraBold.woff') format('woff'), url('../fonts/Limerick-ExtraBold/Limerick-ExtraBold.ttf')  format('truetype'), url('../fonts/Limerick-ExtraBold/Limerick-ExtraBold.svg#Limerick-ExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Limerick-DemiBold';
+  src: url('../fonts/Limerick-DemiBold/Limerick-DemiBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-DemiBold/Limerick-DemiBold.woff') format('woff'), url('../fonts/Limerick-DemiBold/Limerick-DemiBold.ttf')  format('truetype'), url('../fonts/Limerick-DemiBold/Limerick-DemiBold.svg#Limerick-DemiBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Limerick-Light';
+  src: url('../fonts/Limerick-Light/Limerick-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-Light/Limerick-Light.woff') format('woff'), url('../fonts/Limerick-Light/Limerick-Light.ttf')  format('truetype'), url('../fonts/Limerick-Light/Limerick-Light.svg#Limerick-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Limerick-HeavyIta';
+  src: url('../fonts/Limerick-HeavyIta/Limerick-HeavyIta.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-HeavyIta/Limerick-HeavyIta.woff') format('woff'), url('../fonts/Limerick-HeavyIta/Limerick-HeavyIta.ttf')  format('truetype'), url('../fonts/Limerick-HeavyIta/Limerick-HeavyIta.svg#Limerick-HeavyIta') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Limerick-DemiBoldCond';
+  src: url('../fonts/Limerick-DemiBoldCond/Limerick-DemiBoldCond.eot?#iefix') format('embedded-opentype'),  url('../fonts/Limerick-DemiBoldCond/Limerick-DemiBoldCond.woff') format('woff'), url('../fonts/Limerick-DemiBoldCond/Limerick-DemiBoldCond.ttf')  format('truetype'), url('../fonts/Limerick-DemiBoldCond/Limerick-DemiBoldCond.svg#Limerick-DemiBoldCond') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

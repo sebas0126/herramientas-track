@@ -1,0 +1,25 @@
+extends ./layouts/app
+block title
+  title Transmutar codigo
+
+block content
+  include ./partials/menu
+  .row.bg-mail
+    .col-md-12
+      h1 Una herramienta diseñada para los cortes de hoy
+  .container
+    .row
+      br
+      br
+      .col-md-5
+        textarea.form-control#htmlI
+      .col-md-2.bt-content
+        button.btn.btn-info#btnFormat Transmutar
+      .col-md-5
+        textarea.form-control#htmlF
+    .row.visor
+      .col-md-1
+      .col-md-10#show
+      .col-md-1
+        
+  include ./partials/footer
