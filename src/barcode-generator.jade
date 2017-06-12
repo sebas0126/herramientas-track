@@ -4,13 +4,13 @@ block title
 
 block content
   include ./partials/menu
-  .row.bg-mail
+  .row.bg-mail.bg-codes
     .col-md-12
       h1 Por que generar códigos, ahora es mas fácil
   .container
     .row
-      br
-      br
+      .col-md-12
+        p &nbsp;
       .col-md-2.col-md-offset-2
         .form-group
           label(for='txtCant')
@@ -23,9 +23,9 @@ block content
         button.btn.btn-info#btnGenerar Generar
       .col-md-2.btnGenerar
         button.btn.btn-primary.invisible#btnDescargar Descargar
-    .row.visor
-      .col-md-1
-      .col-md-10#show
-      .col-md-1
+      .row.visor
+        .col-md-1
+        .col-md-10#show
+        .col-md-1
 
   include ./partials/footer
