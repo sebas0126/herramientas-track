@@ -10,7 +10,20 @@ block content
   .container
     .row
       br
-      br
+      .col-md-5
+        h4 Tipo de corte
+        br
+        label.radio-inline
+          input#gen(type='radio', name='optradio', checked)
+          | Genérico
+        label.radio-inline
+          input#res(type='radio', name='optradio')
+          | Responsive
+        br
+      .col-md-5
+    .row
+      hr
+    .row
       .col-md-5
         textarea.form-control#htmlI
       .col-md-2.bt-content
