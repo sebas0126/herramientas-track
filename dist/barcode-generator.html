@@ -44,16 +44,48 @@
         <div class="col-md-12">
           <p>&nbsp;</p>
         </div>
-        <div class="col-md-2 col-md-offset-2">
-          <div class="form-group">
-            <label for="txtCant"></label>
-            <input id="txtCant" type="number" placeholder="Cantidad" class="form-control">
+        <div class="col-md-12">
+          <div class="col-md-4 col-md-offset-2">
+            <h4>Tipo de generacion</h4><br>
+            <label class="radio-inline">
+              <input id="random" type="radio" name="rdbGen" checked>Aleatorio
+            </label>
+            <label class="radio-inline">
+              <input id="codes" type="radio" name="rdbGen">Codigos especificos
+            </label>
+            <hr>
+          </div>
+          <div class="col-md-4">
+            <h4>Formato de codigo</h4><br>
+            <label class="radio-inline">
+              <input id="code128" type="radio" name="rdbCode" checked>CODE128
+            </label>
+            <label class="radio-inline">
+              <input id="ean13" type="radio" name="rdbCode">EAN13
+            </label>
+            <hr>
           </div>
         </div>
-        <div class="col-md-2">
-          <div class="form-group">
-            <label for="txtLong"></label>
-            <input id="txtLong" type="number" placeholder="Longitud" class="form-control">
+        <div id="randomForm" class="col-md-5 col-md-offset-2">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input id="txtCant" type="number" placeholder="Cantidad" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input id="txtLong" type="number" placeholder="Longitud" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div id="codesForm" class="col-md-5 col-md-offset-2 invisible">
+          <div class="col-md-6">
+            <div id="addCode" class="form-group">
+              <input id="txtCode0" type="text" placeholder="Codigo" class="form-control"><br>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button type="button" id="btnAdd" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
           </div>
         </div>
         <div class="col-md-2 btnGenerar">
@@ -69,6 +101,12 @@
         </div>
       </div>
     </div>
+    <div class="row footer-site">
+      <div class="col-md-12">
+        <div class="col-md-2"><img src="img/menu/logo-track.png"></div>
+        <div class="col-md-10"><span>© 2017 TRACK Colombia</span></div>
+      </div>
+    </div>
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.easing.1.3.js">     </script>
     <script type="text/javascript" src="js/vendor/jquery.mCustomScrollbar.min.js"></script>
@@ -81,7 +119,7 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/main-boards.js"></script>
     <script type="text/javascript" src="js/vendor/placeholders.min.js"></script>
-    <script type="text/javascript" src="js/vendor/JsBarcode.code128.min.js"></script>
+    <script type="text/javascript" src="js/vendor/JsBarcode.all.min.js"></script>
     <script type="text/javascript" src="js/vendor/jspdf.min.js"></script>
     <script type="text/javascript" src="js/transmute-script.js"></script>
     <script type="text/javascript" src="js/barcode-generator.js"></script>

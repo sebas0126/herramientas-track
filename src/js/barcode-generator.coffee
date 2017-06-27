@@ -1,8 +1,53 @@
+codificacion = "CODE128"
+cantCod = 0
+
 $(document).ready ->
 
-	cantCod = 0
-	long = 
+	aleatorio = true
 
+	rdbRandom = document.getElementById('random')
+	rdbCodes = document.getElementById('codes')
+	rdbC128 = document.getElementById('code128')
+	rdbEAN13 = document.getElementById('ean13')
+
+	rdbC128.onclick = ->
+		codificacion = "CODE128"
+		document.getElementById("txtLong").value = "";
+		document.getElementById("txtLong").readOnly = false;
+		return
+
+	rdbEAN13.onclick = ->
+		codificacion = "EAN13"
+		document.getElementById("txtLong").value = 12;
+		document.getElementById("txtLong").readOnly = true;
+		return
+
+	rdbRandom.onclick = ->
+		$("#codesForm").addClass("invisible")
+		$("#randomForm").removeClass("invisible")
+		aleatorio = true
+		return
+
+	rdbCodes.onclick = ->
+		$("#codesForm").removeClass("invisible")
+		$("#randomForm").addClass("invisible")
+		aleatorio = false
+		return
+
+	btnAdd = document.getElementById('btnAdd')
+	btnAdd.onclick = ->
+		$('#addCode').append('<input id="txtCode' + cantTxt + '" type="text" placeholder="Codigo" class="form-control"><br>')
+		document.getElementById("txtCode" + cantTxt).focus();
+		cantTxt++
+		return
+
+
+	cantTxt = 1
+
+	arrCodes = []
+
+
+	long = 25
 	alto = 25
 	largo = 40
 	fila = 5
@@ -11,19 +56,28 @@ $(document).ready ->
 	pag = 0
 
 	$("#btnGenerar").click ->
+		i = 0
 		$("#show").html("")
-		txtLong = document.getElementById("txtLong")
-		txtCant = document.getElementById("txtCant")
-		cantCod = parseInt(document.getElementById("txtCant").value)
-		long = parseInt(document.getElementById("txtLong").value)
-		if !cantCod
-			txtCant.value = 1
-			cantCod = 1
-		if !long
-			txtLong.value = 5
-			long = 5
-		generarCodigos(cantCod, long);
-		$("#btnDescargar").removeClass("invisible");
+		if aleatorio
+			txtLong = document.getElementById("txtLong")
+			txtCant = document.getElementById("txtCant")
+			cantCod = parseInt(txtCant.value)
+			long = parseInt(txtLong.value)
+			if !cantCod
+				txtCant.value = 1
+				cantCod = 1
+			if !long
+				txtLong.value = 5
+				long = 5
+			generarCodigos(generarAleatorios(cantCod, long));
+		else
+			while i < cantTxt
+				txtAct = document.getElementById("txtCode" + i)
+				arrCodes.push(txtAct.value)
+				i++
+			generarCodigos(arrCodes)
+		$("#btnDescargar").removeClass("invisible")
+
 
 	$("#btnDescargar").click ->
 		x = 0
@@ -49,20 +103,29 @@ $(document).ready ->
 		# download = document.getElementById('download')
 		return
 
-generarCodigos = (cantidad, longitud) ->
+generarCodigos = (arreglo) ->
 	i = 0
-	html = ""
-	while i < cantidad
+	cantCod = arreglo.length
+	while i < cantCod
+		# if codificacion == "EAN13"
+		# 	value = parseInt(arreglo[i])
+		# else
+		# 	value = arreglo[i]
 		html = '<canvas id="cb' + i + '"></canvas>'
 		$("#show").append(html)
-		randomNum = numeroAleatorio(longitud)
-		JsBarcode("#cb" + i, randomNum);
+		JsBarcode("#cb" + i, arreglo[i], {
+			format: codificacion
+		});
 		i++
+
+generarAleatorios = (cantidad, longitud) ->
+	i = 0
+	arrRandom = []
+	while i < cantidad
+		arrRandom.push numeroAleatorio(longitud)
+		i++
+	return arrRandom
 
 numeroAleatorio = (tamano) ->
 	x = Math.random().toString().slice(2, tamano + 2);
 	x
-
-	# cantidad = Math.pow(10, tamano)
-	# x = Math.floor((Math.random() * cantidad) + 1);
-	# x

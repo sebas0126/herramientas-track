@@ -50,18 +50,10 @@ canvas {
 }
 
 .btnGenerar {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   min-height: 72px;
 }
 
@@ -89,10 +81,13 @@ canvas {
 }
 
 .footer-site {
+  display: none;
   border: none;
   border-top-width: medium;
   border-top-style: none;
   border-top-color: currentcolor;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   border-top: 1px solid #c9c3c3;
   padding: 15px;
@@ -158,18 +153,10 @@ canvas {
 .bt-content {
   text-align: center;
   min-height: 200px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 textarea {
@@ -212,6 +199,8 @@ textarea :focus {
   border-bottom-width: medium;
   border-bottom-style: none;
   border-bottom-color: currentcolor;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #c9c3c3;
 }

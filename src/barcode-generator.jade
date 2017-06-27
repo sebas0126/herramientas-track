@@ -11,14 +11,42 @@ block content
     .row
       .col-md-12
         p &nbsp;
-      .col-md-2.col-md-offset-2
-        .form-group
-          label(for='txtCant')
-          input#txtCant.form-control(type='number' placeholder='Cantidad')
-      .col-md-2
-        .form-group
-          label(for='txtLong')
-          input#txtLong.form-control(type='number' placeholder='Longitud')
+      .col-md-12
+        .col-md-4.col-md-offset-2
+          h4 Tipo de generacion
+          br
+          label.radio-inline
+            input#random(type='radio', name='rdbGen', checked)
+            | Aleatorio
+          label.radio-inline
+            input#codes(type='radio', name='rdbGen')
+            | Codigos especificos
+          hr
+        .col-md-4
+          h4 Formato de codigo
+          br
+          label.radio-inline
+            input#code128(type='radio', name='rdbCode', checked)
+            | CODE128
+          label.radio-inline
+            input#ean13(type='radio', name='rdbCode')
+            | EAN13
+          hr
+      .col-md-5.col-md-offset-2#randomForm
+        .col-md-6
+          .form-group
+            input#txtCant.form-control(type='number' placeholder='Cantidad')
+        .col-md-6
+          .form-group
+            input#txtLong.form-control(type='number' placeholder='Longitud')
+      .col-md-5.col-md-offset-2#codesForm.invisible
+        .col-md-6
+          .form-group#addCode
+            input#txtCode0.form-control(type='text' placeholder='Codigo')
+            br
+        .col-md-6
+          button.btn.btn-success(type='button')#btnAdd
+              span.glyphicon.glyphicon-plus
       .col-md-2.btnGenerar
         button.btn.btn-info#btnGenerar Generar
       .col-md-2.btnGenerar
