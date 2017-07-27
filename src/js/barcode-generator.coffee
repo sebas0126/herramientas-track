@@ -44,9 +44,6 @@ $(document).ready ->
 
 	cantTxt = 1
 
-	arrCodes = []
-
-
 	long = 25
 	alto = 25
 	largo = 40
@@ -56,6 +53,7 @@ $(document).ready ->
 	pag = 0
 
 	$("#btnGenerar").click ->
+		arrCodes = []
 		i = 0
 		$("#show").html("")
 		if aleatorio

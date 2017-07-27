@@ -6,7 +6,7 @@
   cantCod = 0;
 
   $(document).ready(function() {
-    var aleatorio, alto, arrCodes, btnAdd, cantTxt, codPagina, fila, largo, long, pag, rdbC128, rdbCodes, rdbEAN13, rdbRandom;
+    var aleatorio, alto, btnAdd, cantTxt, codPagina, fila, largo, long, pag, rdbC128, rdbCodes, rdbEAN13, rdbRandom;
     aleatorio = true;
     rdbRandom = document.getElementById('random');
     rdbCodes = document.getElementById('codes');
@@ -39,7 +39,6 @@
       cantTxt++;
     };
     cantTxt = 1;
-    arrCodes = [];
     long = 25;
     alto = 25;
     largo = 40;
@@ -47,7 +46,8 @@
     codPagina = 60;
     pag = 0;
     $("#btnGenerar").click(function() {
-      var i, txtAct, txtCant, txtLong;
+      var arrCodes, i, txtAct, txtCant, txtLong;
+      arrCodes = [];
       i = 0;
       $("#show").html("");
       if (aleatorio) {
