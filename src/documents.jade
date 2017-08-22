@@ -1,0 +1,57 @@
+extends ./layouts/app
+block title
+  title Documentos y Archivos
+
+block content
+  include ./partials/menu
+  .row.bg-mail
+    .col-md-12
+      h1 Ahora la vida es mas fácil
+  .container
+    .row
+      br
+      .col-md-5
+        h4 Documentos y archivos de interés
+    .row
+      hr
+      .col-md-12
+        .col-md-2
+          img.img-responsive(src='img/util/docs.png')
+        .col-md-8
+          h3 Estilos por defecto (CSS & SASS)
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum cupiditate officiis natus nobis unde praesentium itaque placeat quas blanditiis assumenda! Repellat dignissimos beatae, facere repudiandae. Debitis voluptatum perferendis expedita sit.
+        .col-md-1
+          br
+          a(href='files/css/default-style/dist/default-style.css', target='_blanck')
+            img.img-responsive(src='img/util/download.png')
+          h4.center CSS
+        .col-md-1
+          br
+          a(href='files/css/default-style/src/default-style.sass', target='_blanck')
+            img.img-responsive(src='img/util/download.png')
+          h4.center SASS
+      .col-md-12
+        hr
+        .col-md-2
+          img.img-responsive(src='img/util/docs.png')
+        .col-md-8
+          h3 Documento de estimación Front-End
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati ea eaque eius corporis, dolorum possimus amet deserunt consequuntur aperiam nulla impedit illum. Voluptatibus dolor consequuntur laboriosam inventore sit ipsum repellendus.
+        .col-md-1
+          br
+          a(href='files/documents/cuadro-de-estimacion-front-end.xlsx', target='_blanck')
+            img.img-responsive(src='img/util/download.png')
+          h4.center EXCEL
+      .col-md-12
+        hr
+        .col-md-2
+          img.img-responsive(src='img/util/docs.png')
+        .col-md-10
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolorum, in laudantium molestias quaerat. Eos hic rem magni nihil optio voluptatibus, in eum blanditiis obcaecati quo porro quaerat eveniet earum.
+      .col-md-12
+        hr
+        .col-md-2
+          img.img-responsive(src='img/util/docs.png')
+        .col-md-10
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolorum, in laudantium molestias quaerat. Eos hic rem magni nihil optio voluptatibus, in eum blanditiis obcaecati quo porro quaerat eveniet earum.
+  //- include ./partials/footer
