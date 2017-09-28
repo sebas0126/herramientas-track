@@ -114,6 +114,7 @@ canvas
         position: relative
         display: block
         text-align: -webkit-match-parent
+        transition: all ease 0.5s;
         a
           border-bottom: 6px transparent solid
           font-size: 18px
@@ -173,6 +174,7 @@ textarea
     cursor: pointer
     width: 90%
     display: inline
+    transition: all ease 0.5s;
     img
       width: 50%
       // border-radius: 50%
@@ -190,10 +192,12 @@ textarea
   div
     width: 100%
     .img1
-      background-image: url(../img/slide/slide-2.jpg)
+      background-image: url(../img/slide/slide-1.jpg)
     .img2
-      background-image: url(../img/slide/slide-3.png)
+      background-image: url(../img/slide/slide-2.jpg)
     .img3
+      background-image: url(../img/slide/slide-3.png)
+    .img4
       background-image: url(../img/slide/slide-4.jpg)
     .img
       width: 100%
@@ -209,5 +213,18 @@ textarea
       
 /* Fin Slide */
 
+// Documentos de interes
 
+#util div
+  border-radius: 10px
+  transition: all ease 0.5s;
+  &:hover
+    background-color: #e0dede
+  .col-md-1
+    cursor: pointer
+    &:hover
+      background-color: #571f4b
+      color: #ffffff
+
+// fin documentos de interes
 

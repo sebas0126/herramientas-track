@@ -131,6 +131,7 @@ canvas {
   position: relative;
   display: block;
   text-align: -webkit-match-parent;
+  transition: all ease 0.5s;
 }
 
 .menu-site .options-menu ul li a {
@@ -213,6 +214,7 @@ textarea :focus {
   cursor: pointer;
   width: 90%;
   display: inline;
+  transition: all ease 0.5s;
 }
 
 .apps .app img {
@@ -237,14 +239,18 @@ textarea :focus {
 }
 
 .background div .img1 {
-  background-image: url(../img/slide/slide-2.jpg);
+  background-image: url(../img/slide/slide-1.jpg);
 }
 
 .background div .img2 {
-  background-image: url(../img/slide/slide-3.png);
+  background-image: url(../img/slide/slide-2.jpg);
 }
 
 .background div .img3 {
+  background-image: url(../img/slide/slide-3.png);
+}
+
+.background div .img4 {
   background-image: url(../img/slide/slide-4.jpg);
 }
 
@@ -266,3 +272,20 @@ textarea :focus {
 }
 
 /* Fin Slide */
+#util div {
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+
+#util div:hover {
+  background-color: #e0dede;
+}
+
+#util div .col-md-1 {
+  cursor: pointer;
+}
+
+#util div .col-md-1:hover {
+  background-color: #571f4b;
+  color: #ffffff;
+}
