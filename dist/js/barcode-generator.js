@@ -6,7 +6,7 @@
   cantCod = 0;
 
   $(document).ready(function() {
-    var aleatorio, alto, btnAdd, cantTxt, codPagina, fila, largo, long, pag, rdbC128, rdbCodes, rdbEAN13, rdbRandom;
+    var aleatorio, alto, codPagina, fila, largo, long, pag, rdbC128, rdbCodes, rdbEAN13, rdbRandom;
     aleatorio = true;
     rdbRandom = document.getElementById('random');
     rdbCodes = document.getElementById('codes');
@@ -32,13 +32,6 @@
       $("#randomForm").addClass("invisible");
       aleatorio = false;
     };
-    btnAdd = document.getElementById('btnAdd');
-    btnAdd.onclick = function() {
-      $('#addCode').append('<input id="txtCode' + cantTxt + '" type="text" placeholder="Codigo" class="form-control"><br>');
-      document.getElementById("txtCode" + cantTxt).focus();
-      cantTxt++;
-    };
-    cantTxt = 1;
     long = 25;
     alto = 25;
     largo = 40;
@@ -65,16 +58,14 @@
         }
         generarCodigos(generarAleatorios(cantCod, long));
       } else {
-        while (i < cantTxt) {
-          txtAct = document.getElementById("txtCode" + i);
-          arrCodes.push(txtAct.value);
-          i++;
-        }
+        txtAct = document.getElementById("txtCodes");
+        arrCodes = txtAct.value.split("\n");
         generarCodigos(arrCodes);
       }
-      return $("#btnDescargar").removeClass("invisible");
+      $("#btnDescargarPDF").removeClass("invisible");
+      return $("#btnDescargarZIP").removeClass("invisible");
     });
-    return $("#btnDescargar").click(function() {
+    $("#btnDescargarPDF").click(function() {
       var canvas, codigos, cont, pdf, x, y;
       x = 0;
       y = 0;
@@ -93,12 +84,32 @@
           pag = pag + 1;
           x = 0;
           y = 0;
-          pdf.save("codigos-pag-" + pag + ".pdf");
-          pdf = new jsPDF();
+          pdf.addPage();
         }
         cont++;
       }
-      pdf.save("codigos-pag-" + pag + ".pdf");
+      pdf.save("codigos.pdf");
+    });
+    return $("#btnDescargarZIP").click(function() {
+      var codesArr, folder, obj, zip;
+      zip = new JSZip();
+      folder = zip.folder("codes");
+      obj = document.getElementById("show");
+      codesArr = Array.prototype.slice.call(obj.getElementsByTagName("CANVAS"));
+      codesArr.forEach(function(t, i) {
+        var data;
+        data = t.toDataURL();
+        data = data.substr(data.indexOf(',') + 1);
+        console.log(data);
+        return folder.file("code" + i + ".png", data, {
+          base64: true
+        });
+      });
+      zip.generateAsync({
+        type: 'blob'
+      }).then(function(content) {
+        saveAs(content, 'codes.zip');
+      });
     });
   });
 

@@ -1,0 +1,277 @@
+/* Default classes */
+/* kebab-case */
+/* -- text styles -- */
+/* text style */
+.text-bold {
+  font-weight: bold;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+/* text size */
+.text-11 {
+  font-size: 11px;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-16 {
+  font-size: 16px;
+}
+
+.text-18 {
+  font-size: 18px;
+}
+
+.text-20 {
+  font-size: 20px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-28 {
+  font-size: 28px;
+}
+
+.text-30 {
+  font-size: 30px;
+}
+
+.text-32 {
+  font-size: 32px;
+}
+
+.text-34 {
+  font-size: 34px;
+}
+
+.text-36 {
+  font-size: 36px;
+}
+
+/* text color */
+.text-black {
+  color: #000000;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-red {
+  color: #f44336;
+}
+
+.text-pink {
+  color: #e91e63;
+}
+
+.text-purple {
+  color: #9c27b0;
+}
+
+.text-deeppurple {
+  color: #673ab7;
+}
+
+.text-indigo {
+  color: #3f51b5;
+}
+
+.text-blue {
+  color: #2196f3;
+}
+
+.text-lightblue {
+  color: #03a9f4;
+}
+
+.text-cyan {
+  color: #00bcd4;
+}
+
+.text-teal {
+  color: #009688;
+}
+
+.text-green {
+  color: #4caf50;
+}
+
+.text-lightgreen {
+  color: #8bc34a;
+}
+
+.text-lime {
+  color: #cddc39;
+}
+
+.text-yellow {
+  color: #ffeb3b;
+}
+
+.text-amber {
+  color: #ffc107;
+}
+
+.text-orange {
+  color: #ff9800;
+}
+
+.text-deeporange {
+  color: #ff5722;
+}
+
+.text-brown {
+  color: #795548;
+}
+
+.text-grey {
+  color: #9e9e9e;
+}
+
+.text-bluegrey {
+  color: #607d8b;
+}
+
+/* text align */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Anchor style */
+.anchor-reset {
+  text-decoration: none;
+  color: initial;
+}
+
+.anchor-reset:hover {
+  color: initial;
+  text-decoration: none;
+}
+
+/* -- general styles -- */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/* background color */
+.bg-black {
+  background-color: #000000;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-red {
+  background-color: #f44336;
+}
+
+.bg-pink {
+  background-color: #e91e63;
+}
+
+.bg-purple {
+  background-color: #9c27b0;
+}
+
+.bg-deeppurple {
+  background-color: #673ab7;
+}
+
+.bg-indigo {
+  background-color: #3f51b5;
+}
+
+.bg-blue {
+  background-color: #2196f3;
+}
+
+.bg-lightblue {
+  background-color: #03a9f4;
+}
+
+.bg-cyan {
+  background-color: #00bcd4;
+}
+
+.bg-teal {
+  background-color: #009688;
+}
+
+.bg-green {
+  background-color: #4caf50;
+}
+
+.bg-lightgreen {
+  background-color: #8bc34a;
+}
+
+.bg-lime {
+  background-color: #cddc39;
+}
+
+.bg-yellow {
+  background-color: #ffeb3b;
+}
+
+.bg-amber {
+  background-color: #ffc107;
+}
+
+.bg-orange {
+  background-color: #ff9800;
+}
+
+.bg-deeporange {
+  background-color: #ff5722;
+}
+
+.bg-brown {
+  background-color: #795548;
+}
+
+.bg-grey {
+  background-color: #9e9e9e;
+}
+
+.bg-bluegrey {
+  background-color: #607d8b;
+}
+
+/* End default classes */

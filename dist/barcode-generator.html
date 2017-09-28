@@ -67,7 +67,7 @@
             <hr>
           </div>
         </div>
-        <div id="randomForm" class="col-md-5 col-md-offset-2">
+        <div id="randomForm" class="col-md-4 col-md-offset-2">
           <div class="col-md-6">
             <div class="form-group">
               <input id="txtCant" type="number" placeholder="Cantidad" class="form-control">
@@ -79,21 +79,20 @@
             </div>
           </div>
         </div>
-        <div id="codesForm" class="col-md-5 col-md-offset-2 invisible">
-          <div class="col-md-6">
+        <div id="codesForm" class="col-md-4 col-md-offset-2 invisible">
+          <div class="col-md-12">
             <div id="addCode" class="form-group">
-              <input id="txtCode0" type="text" placeholder="Codigo" class="form-control"><br>
+              <textarea id="txtCodes" placeholder="Codigos" class="form-control"></textarea><br>
             </div>
           </div>
-          <div class="col-md-6">
-            <button type="button" id="btnAdd" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button>
-          </div>
         </div>
-        <div class="col-md-2 btnGenerar">
-          <button id="btnGenerar" class="btn btn-info">Generar</button>
+        <div class="col-md-3 btnGenerar">
+          <button id="btnGenerar" class="btn btn-info">Generar</button><br>
+          <button id="btnDescargarPDF" class="btn btn-primary invisible">Descargar PDF</button><br>
+          <button id="btnDescargarZIP" class="btn btn-primary invisible">Descargar ZIP</button>
         </div>
-        <div class="col-md-2 btnGenerar">
-          <button id="btnDescargar" class="btn btn-primary invisible">Descargar</button>
+        <div class="col-md-12">
+          <p>&nbsp;</p>
         </div>
         <div class="row visor">
           <div class="col-md-1"></div>
@@ -122,6 +121,8 @@
     <script type="text/javascript" src="js/vendor/placeholders.min.js"></script>
     <script type="text/javascript" src="js/vendor/JsBarcode.all.min.js"></script>
     <script type="text/javascript" src="js/vendor/jspdf.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jszip.min.js"></script>
+    <script type="text/javascript" src="js/vendor/FileSaver.min.js"></script>
     <script type="text/javascript" src="js/transmute-script.js"></script>
     <script type="text/javascript" src="js/barcode-generator.js"></script>
   </body>

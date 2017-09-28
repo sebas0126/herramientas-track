@@ -34,16 +34,6 @@ $(document).ready ->
 		aleatorio = false
 		return
 
-	btnAdd = document.getElementById('btnAdd')
-	btnAdd.onclick = ->
-		$('#addCode').append('<input id="txtCode' + cantTxt + '" type="text" placeholder="Codigo" class="form-control"><br>')
-		document.getElementById("txtCode" + cantTxt).focus();
-		cantTxt++
-		return
-
-
-	cantTxt = 1
-
 	long = 25
 	alto = 25
 	largo = 40
@@ -69,15 +59,14 @@ $(document).ready ->
 				long = 5
 			generarCodigos(generarAleatorios(cantCod, long));
 		else
-			while i < cantTxt
-				txtAct = document.getElementById("txtCode" + i)
-				arrCodes.push(txtAct.value)
-				i++
+			txtAct = document.getElementById("txtCodes")
+			arrCodes = txtAct.value.split("\n");
 			generarCodigos(arrCodes)
-		$("#btnDescargar").removeClass("invisible")
+		$("#btnDescargarPDF").removeClass("invisible")
+		$("#btnDescargarZIP").removeClass("invisible")
 
 
-	$("#btnDescargar").click ->
+	$("#btnDescargarPDF").click ->
 		x = 0
 		y = 0
 		cont = 1
@@ -94,11 +83,27 @@ $(document).ready ->
 				pag = pag + 1
 				x = 0
 				y = 0
-				pdf.save "codigos-pag-" + pag + ".pdf"
-				pdf = new jsPDF()
+				pdf.addPage()
+				# pdf.save "codigos-pag-" + pag + ".pdf"
+				# pdf = new jsPDF()
 			cont++
-		pdf.save "codigos-pag-" + pag + ".pdf"
+		pdf.save "codigos.pdf"
 		# download = document.getElementById('download')
+		return
+
+	$("#btnDescargarZIP").click ->
+		zip = new JSZip()
+		folder = zip.folder("codes")
+		obj = document.getElementById("show")
+		codesArr = Array::slice.call(obj.getElementsByTagName("CANVAS"))
+		codesArr.forEach (t, i) ->
+			data = t.toDataURL()
+			data = data.substr(data.indexOf(',')+1)
+			console.log(data)
+			folder.file("code" + i + ".png", data, {base64: true})
+		zip.generateAsync(type: 'blob').then (content) ->
+		  saveAs content, 'codes.zip'
+		  return
 		return
 
 generarCodigos = (arreglo) ->
@@ -106,9 +111,9 @@ generarCodigos = (arreglo) ->
 	cantCod = arreglo.length
 	while i < cantCod
 		# if codificacion == "EAN13"
-		# 	value = parseInt(arreglo[i])
+		#   value = parseInt(arreglo[i])
 		# else
-		# 	value = arreglo[i]
+		#   value = arreglo[i]
 		html = '<canvas id="cb' + i + '"></canvas>'
 		$("#show").append(html)
 		JsBarcode("#cb" + i, arreglo[i], {
