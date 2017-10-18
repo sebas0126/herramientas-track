@@ -1,17 +1,27 @@
 (function() {
-  var cantCod, codificacion, generarAleatorios, generarCodigos, numeroAleatorio;
+  var cantCod, codificacion, formato, generarAleatorios, generarCodigos, numeroAleatorio;
 
   codificacion = "CODE128";
 
   cantCod = 0;
 
+  formato = "jpeg";
+
   $(document).ready(function() {
-    var aleatorio, alto, codPagina, fila, largo, long, pag, rdbC128, rdbCodes, rdbEAN13, rdbRandom;
+    var aleatorio, alto, codPagina, fila, largo, long, pag, rdbC128, rdbCodes, rdbEAN13, rdbJpg, rdbPng, rdbRandom;
     aleatorio = true;
     rdbRandom = document.getElementById('random');
     rdbCodes = document.getElementById('codes');
     rdbC128 = document.getElementById('code128');
     rdbEAN13 = document.getElementById('ean13');
+    rdbJpg = document.getElementById('rdbJpg');
+    rdbPng = document.getElementById('rdbPng');
+    rdbJpg.onclick = function() {
+      formato = "jpeg";
+    };
+    rdbPng.onclick = function() {
+      formato = "png";
+    };
     rdbC128.onclick = function() {
       codificacion = "CODE128";
       document.getElementById("txtLong").value = "";
@@ -73,7 +83,7 @@
       pdf = new jsPDF();
       codigos = $('canvas');
       while (cont <= cantCod) {
-        canvas = codigos[cont - 1].toDataURL('image/jpeg', 1.0);
+        canvas = codigos[cont - 1].toDataURL('image/' + formato, 1.0);
         pdf.addImage(canvas, 'JPEG', x, y, 36, 21);
         x = x + largo;
         if (cont % fila === 0 && cont !== 0) {
@@ -101,7 +111,7 @@
         data = t.toDataURL();
         data = data.substr(data.indexOf(',') + 1);
         console.log(data);
-        return folder.file("code" + i + ".png", data, {
+        return folder.file("code" + i + "." + formato, data, {
           base64: true
         });
       });

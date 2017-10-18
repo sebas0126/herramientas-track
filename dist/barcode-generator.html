@@ -46,7 +46,7 @@
           <p>&nbsp;</p>
         </div>
         <div class="col-md-12">
-          <div class="col-md-4 col-md-offset-2">
+          <div class="col-md-4">
             <h4>Tipo de generacion</h4><br>
             <label class="radio-inline">
               <input id="random" type="radio" name="rdbGen" checked>Aleatorio
@@ -66,6 +66,16 @@
             </label>
             <hr>
           </div>
+          <div class="col-md-4">
+            <h4>Formato de imagen</h4><br>
+            <label class="radio-inline">
+              <input id="rdbJpg" type="radio" name="rdbFormat" checked>JPG
+            </label>
+            <label class="radio-inline">
+              <input id="rdbPng" type="radio" name="rdbFormat">PNG
+            </label>
+            <hr>
+          </div>
         </div>
         <div id="randomForm" class="col-md-4 col-md-offset-2">
           <div class="col-md-6">
@@ -79,7 +89,7 @@
             </div>
           </div>
         </div>
-        <div id="codesForm" class="col-md-4 col-md-offset-2 invisible">
+        <div id="codesForm" class="col-md-4 invisible">
           <div class="col-md-12">
             <div id="addCode" class="form-group">
               <textarea id="txtCodes" placeholder="Codigos" class="form-control"></textarea><br>

@@ -12,7 +12,7 @@ block content
       .col-md-12
         p &nbsp;
       .col-md-12
-        .col-md-4.col-md-offset-2
+        .col-md-4
           h4 Tipo de generacion
           br
           label.radio-inline
@@ -32,6 +32,16 @@ block content
             input#ean13(type='radio', name='rdbCode')
             | EAN13
           hr
+        .col-md-4
+          h4 Formato de imagen
+          br
+          label.radio-inline
+            input#rdbJpg(type='radio', name='rdbFormat', checked)
+            | JPG
+          label.radio-inline
+            input#rdbPng(type='radio', name='rdbFormat')
+            | PNG
+          hr
       .col-md-4.col-md-offset-2#randomForm
         .col-md-6
           .form-group
@@ -39,7 +49,7 @@ block content
         .col-md-6
           .form-group
             input#txtLong.form-control(type='number' placeholder='Longitud')
-      .col-md-4.col-md-offset-2#codesForm.invisible
+      .col-md-4#codesForm.invisible
         .col-md-12
           .form-group#addCode
             textarea#txtCodes.form-control(placeholder='Codigos')

@@ -1,5 +1,6 @@
 codificacion = "CODE128"
 cantCod = 0
+formato = "jpeg"
 
 $(document).ready ->
 
@@ -9,6 +10,16 @@ $(document).ready ->
 	rdbCodes = document.getElementById('codes')
 	rdbC128 = document.getElementById('code128')
 	rdbEAN13 = document.getElementById('ean13')
+	rdbJpg = document.getElementById('rdbJpg')
+	rdbPng = document.getElementById('rdbPng')
+
+	rdbJpg.onclick = ->
+		formato = "jpeg"
+		return
+
+	rdbPng.onclick = ->
+		formato = "png"
+		return
 
 	rdbC128.onclick = ->
 		codificacion = "CODE128"
@@ -73,7 +84,7 @@ $(document).ready ->
 		pdf = new jsPDF()
 		codigos = $('canvas')
 		while cont <= cantCod
-			canvas = codigos[cont-1].toDataURL('image/jpeg', 1.0)
+			canvas = codigos[cont-1].toDataURL('image/' + formato, 1.0)
 			pdf.addImage canvas, 'JPEG', x, y, 36, 21
 			x = x + largo
 			if cont % fila == 0 && cont != 0
@@ -100,7 +111,7 @@ $(document).ready ->
 			data = t.toDataURL()
 			data = data.substr(data.indexOf(',')+1)
 			console.log(data)
-			folder.file("code" + i + ".png", data, {base64: true})
+			folder.file("code" + i + "." + formato, data, {base64: true})
 		zip.generateAsync(type: 'blob').then (content) ->
 		  saveAs content, 'codes.zip'
 		  return
