@@ -70,6 +70,11 @@
       } else {
         txtAct = document.getElementById("txtCodes");
         arrCodes = txtAct.value.split("\n");
+        arrCodes = arrCodes.filter((function(_this) {
+          return function(i) {
+            return i;
+          };
+        })(this));
         generarCodigos(arrCodes);
       }
       $("#btnDescargarPDF").removeClass("invisible");

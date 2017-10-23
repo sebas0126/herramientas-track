@@ -72,6 +72,7 @@ $(document).ready ->
 		else
 			txtAct = document.getElementById("txtCodes")
 			arrCodes = txtAct.value.split("\n");
+			arrCodes = arrCodes.filter((i) => i);
 			generarCodigos(arrCodes)
 		$("#btnDescargarPDF").removeClass("invisible")
 		$("#btnDescargarZIP").removeClass("invisible")
