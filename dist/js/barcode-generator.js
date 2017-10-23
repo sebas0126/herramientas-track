@@ -111,7 +111,7 @@
         data = t.toDataURL();
         data = data.substr(data.indexOf(',') + 1);
         console.log(data);
-        return folder.file("code" + i + "." + formato, data, {
+        return folder.file("code" + i + "." + formato.replace("e", ""), data, {
           base64: true
         });
       });

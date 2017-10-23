@@ -111,7 +111,7 @@ $(document).ready ->
 			data = t.toDataURL()
 			data = data.substr(data.indexOf(',')+1)
 			console.log(data)
-			folder.file("code" + i + "." + formato, data, {base64: true})
+			folder.file("code" + i + "." + formato.replace("e", ""), data, {base64: true})
 		zip.generateAsync(type: 'blob').then (content) ->
 		  saveAs content, 'codes.zip'
 		  return
