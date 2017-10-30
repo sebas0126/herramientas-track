@@ -8,9 +8,12 @@ $(document).ready ->
       if document.getElementById("res").checked
         console.log "responsive"
         responsiveFormat()
-      else
+      else if document.getElementById("gen").checked
         console.log "generico"
-        emailFormat()
+        genericFormat()
+      else
+        console.log "MasterCard"
+        mcFormat()
 
 htmlTag = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml">\n%body%\n</html>'
 
@@ -49,7 +52,27 @@ GENERICHEADER = '\n<tr>
     \n</td>
   \n</tr>'
 
-MASTERCARDHEADER = '\n<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+MASTERCARDHEADER = '\n<tr>
+    \n<td style="font-family: arial, helvetica, sans-serif; color:#ffffff; background-color:#292929; padding: 15px 20px; text-align: left; box-sizing: border-box; font-size: 14px; font-weight: bold;">
+      \n¡No pierdas tu oportunidad, llega a tu meta, gana y disfruta!
+    \n</td>
+  \n</tr>
+ \n%replace%
+\n<tr>
+    \n<td style="padding: 0 0 0 11px; background-color: #ffffff;">
+      \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">Bancolombia nunca solicitará datos financieros como usuarios, claves, números de tarjetas de crédito con sus códigos de seguridad y fechas de vencimiento mediante vínculos de correo electrónico, si recibe alguno, repórtelo de inmediato a correosospechoso@bancolombia.com.co</p>
+      \n<hr style="color: #6c6d71;margin: 12px 67px 0 0;" />
+      \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">Más información en nuestras líneas de atención telefónica:</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif;line-height: 12px;"> Bogot&aacute; <a href="tel:+5713430000" style="text-decoration:none"><span style="color:#00448c">+57 (1) 343 00 00</span></a> – Medell&iacute;n <a href="tel:+5745109000" style="text-decoration:none"><span style="color:#00448c">+57 (4) 510 90 00</span></a> – Cali <a href="tel:+5725540505" style="text-decoration:none"><span style="color:#00448c">+57 (2) 554 05 05</span></a></p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Barranquilla <a href="tel:+5753618888" style="text-decoration:none"><span style="color:#00448c">+57 (5) 361 88 88</span></a> – Bucaramanga <a href="tel:+5776972525" style="text-decoration:none"><span style="color:#00448c">+57 (7) 697 25 25</span></a> – Cartagena <a href="tel:+5756934400" style="text-decoration:none"><span style="color:#00448c">+57 (5) 693 44 00</span></a></p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Resto del pa&iacute;s <span style="color:#00448c">01800 09 12345</span></p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Sede principal Cra 48 Nro. 26-85</p>
+     \n <p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Medell&iacute;n – Colombia</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:5px 43px 20px 0; text-align:left; font-family:Helvetica,Arial, sans-serif;">Si desea dejar de recibir este contenido, haga clic<a href="#SPONECLICKOPTOUT" name="qLink1" target="_blank" xt="SPONECLICKOPTOUT">&nbsp;aqu&iacute;.&nbsp;</a></p>
+    \n</td>
+  \n</tr>'
+
+RESPONSIVEHEADER = '\n<table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
 \n<tr>
 \n<td>&nbsp;</td>
 \n<td style="font-family: arial, helvetica, sans-serif; color:#ffffff; background-color:#014678; padding: 15px 20px; text-align: left; box-sizing: border-box; font-size: 14px; font-weight: bold;">
@@ -173,7 +196,7 @@ responsiveFormat = ->
   addAttr(firstTableTag, 'table', ['style'], ['width: 100%'])
 
   # Reemplazar header
-  addHeader(firstTableTag, MASTERCARDHEADER)
+  addHeader(firstTableTag, RESPONSIVEHEADER)
   firstTableTag.setAttribute('style', 'width: 100%;');
   firstTableTag.removeAttribute('width');
 
@@ -199,6 +222,7 @@ responsiveFormat = ->
   mail.appendChild bodyTag
 
   text = htmlTag.replace('%body%', mail.innerHTML)
+  text = text.replace(/<tbody>/g, '').replace(/<\/tbody>/g, '')
   text = text.replace(/></g, '>\n<')
   text = text.replace(/<!--[\s\S]*?-->/g, '')
   text = text.replace(/^\s*[\r\n]/gm, '')
@@ -207,7 +231,7 @@ responsiveFormat = ->
 
   return
 
-emailFormat = ->
+genericFormat = ->
   mailHtml = document.getElementById('htmlI').value.replace('\\', '')
   mail = document.getElementById('show')
   mail.innerHTML = mailHtml
@@ -251,6 +275,66 @@ emailFormat = ->
   mail.appendChild bodyTag
 
   text = htmlTag.replace('%body%', mail.innerHTML)
+  text = text.replace(/<tbody>/g, '').replace(/<\/tbody>/g, '')
+  text = text.replace(/></g, '>\n<')
+  text = text.replace(/<!--[\s\S]*?-->/g, '')
+  text = text.replace(/^\s*[\r\n]/gm, '')
+  text = text.replace(/^\s+/mg, '')
+  document.getElementById('htmlF').value = text
+  return
+
+
+mcFormat = ->
+  mailHtml = document.getElementById('htmlI').value.replace('\\', '')
+  mail = document.getElementById('show')
+  mail.innerHTML = mailHtml
+
+  # Borrar etiqueta style
+  deleteStyle(mail)
+
+  # Borrar atributos de etiqueta img
+  removeAttr(mail, 'img', ['id', 'alt', 'height', 'name'])
+
+  # Agregar atributo style a etiqueta img
+  addAttr(mail, 'img', ['style'], ['display: block; border: none;'])
+
+  # Borrar atributos de etiqueta table
+  removeAttr(mail, 'table', ['style', 'left"'])
+
+  # Reemplazar header
+  firstTableTag = mail.getElementsByTagName("table")[0]
+  firstTableTag.removeAttribute 'width'
+  firstTableTag.style.cssText = 'max-width: 600px; width: 600px; margin: 0 auto; background-color: red'
+  addHeader(firstTableTag, MASTERCARDHEADER)
+
+  # Agregar body
+  bodyTag = document.createElement('BODY')
+  bodyTag.setAttribute 'bgcolor', '#ffffff'
+  bodyTag.setAttribute 'leftmargin', '0'
+  bodyTag.setAttribute 'topmargin', '0'
+  bodyTag.setAttribute 'marginwidth', '0'
+  bodyTag.setAttribute 'marginheight', '0'
+  bodyTag.style.width = '100%'
+
+  # Agregar style outlook
+  styleTag = document.createElement('STYLE')
+  styleTag.innerHTML = outlookStyle
+
+  # Obtener etiquetas head
+  titleTag = mail.getElementsByTagName('title')[0]
+  metaTag = mail.getElementsByTagName('meta')[0]
+
+  #Agregar header
+  headTag = document.createElement('HEAD')
+  headTag.appendChild titleTag
+  headTag.appendChild metaTag
+  mail.appendChild headTag
+  bodyTag.appendChild styleTag
+  bodyTag.appendChild firstTableTag
+  mail.appendChild bodyTag
+
+  text = htmlTag.replace('%body%', mail.innerHTML)
+  text = text.replace(/<tbody>/g, '').replace(/<\/tbody>/g, '')
   text = text.replace(/></g, '>\n<')
   text = text.replace(/<!--[\s\S]*?-->/g, '')
   text = text.replace(/^\s*[\r\n]/gm, '')
