@@ -67,8 +67,8 @@ MASTERCARDHEADER = '\n<tr>
       \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Barranquilla <a href="tel:+5753618888" style="text-decoration:none"><span style="color:#00448c">+57 (5) 361 88 88</span></a> – Bucaramanga <a href="tel:+5776972525" style="text-decoration:none"><span style="color:#00448c">+57 (7) 697 25 25</span></a> – Cartagena <a href="tel:+5756934400" style="text-decoration:none"><span style="color:#00448c">+57 (5) 693 44 00</span></a></p>
       \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Resto del pa&iacute;s <span style="color:#00448c">01800 09 12345</span></p>
       \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Sede principal Cra 48 Nro. 26-85</p>
-     \n <p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Medell&iacute;n – Colombia</p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:5px 43px 20px 0; text-align:left; font-family:Helvetica,Arial, sans-serif;">Si desea dejar de recibir este contenido, haga clic<a href="#SPONECLICKOPTOUT" name="qLink1" target="_blank" xt="SPONECLICKOPTOUT">&nbsp;aqu&iacute;.&nbsp;</a></p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Medell&iacute;n – Colombia</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:5px 43px 20px 0; text-align:left; font-family:Helvetica,Arial, sans-serif;"><a href="#SPONECLICKOPTOUT" name="qLink1" target="_blank" xt="SPONECLICKOPTOUT">Cancelar suscripci&oacute;n</a></p>
     \n</td>
   \n</tr>'
 

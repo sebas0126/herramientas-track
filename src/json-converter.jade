@@ -1,0 +1,11 @@
+extends ./layouts/app
+
+block title
+  title Conversor a JSON
+
+block content
+  form#fileUpload(method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data")
+    label(for="payload") Selecciona el archivo a convertir (CSV):
+    input#payload(type="file" name="myFile" accept="text/*")
+    br
+    button#upload Convertir
