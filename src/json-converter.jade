@@ -4,8 +4,19 @@ block title
   title Conversor a JSON
 
 block content
-  form#fileUpload(method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data")
-    label(for="payload") Selecciona el archivo a convertir (CSV):
-    input#payload(type="file" name="myFile" accept="text/*")
-    br
-    button#upload Convertir
+  include ./partials/menu
+  .row.bg-mail
+    .col-md-12
+      h1 De Excel a Json
+  .container
+    .row
+      br
+      br
+      br
+      form#fileUpload(method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data")
+      .col-md-4
+        label(for="payload") Selecciona el archivo a convertir (CSV):
+      .col-md-4
+        input#payload(type="file" name="myFile" accept="text/*")
+      .col-md-4
+        button#upload.btn.btn-info Convertir

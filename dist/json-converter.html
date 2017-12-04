@@ -22,11 +22,39 @@
     <script src="js/respond.min.js"></script>
   </head>
   <body>
-    <form id="fileUpload" method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data">
-      <label for="payload">Selecciona el archivo a convertir (CSV):</label>
-      <input id="payload" type="file" name="myFile" accept="text/*"><br>
-      <button id="upload">Convertir</button>
-    </form>
+    <div class="row menu-site">
+      <div class="col-md-12">
+        <div class="col-md-2"><a href="index.html"><img src="img/menu/logo-track.png"></a></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8 options-menu">
+          <ul class="nav pull-right navbar-nav">
+            <li class="menu-contactenos"><a title="transmutation" href="transmute-code.html">Transmutar código</a></li>
+            <li class="menu-contactenos"><a title="codebar" href="barcode-generator.html">Generar codigos de barras</a></li>
+            <li class="menu-contactenos"><a title="transmutation" href="documents.html">Documentos y archivos</a></li>
+            <li class="menu-contactenos"><a title="transmutation" href="json-converter.html">Convertir a JSON</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row bg-mail">
+      <div class="col-md-12">
+        <h1>De Excel a Json</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row"><br><br><br>
+        <form id="fileUpload" method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data"></form>
+        <div class="col-md-4">
+          <label for="payload">Selecciona el archivo a convertir (CSV):</label>
+        </div>
+        <div class="col-md-4">
+          <input id="payload" type="file" name="myFile" accept="text/*">
+        </div>
+        <div class="col-md-4">
+          <button id="upload" class="btn btn-info">Convertir</button>
+        </div>
+      </div>
+    </div>
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.easing.1.3.js">     </script>
     <script type="text/javascript" src="js/vendor/jquery.mCustomScrollbar.min.js"></script>
