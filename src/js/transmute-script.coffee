@@ -60,15 +60,63 @@ MASTERCARDHEADER = '\n<tr>
  \n%replace%
 \n<tr>
     \n<td style="padding: 0 0 0 11px; background-color: #ffffff;">
-      \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">Bancolombia nunca solicitará datos financieros como usuarios, claves, números de tarjetas de crédito con sus códigos de seguridad y fechas de vencimiento mediante vínculos de correo electrónico, si recibe alguno, repórtelo de inmediato a correosospechoso@bancolombia.com.co</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">
+      \nBancolombia nunca solicitará datos financieros como usuarios, claves, números de tarjetas de crédito con sus códigos de seguridad y fechas de vencimiento mediante vínculos de correo electrónico, si recibe alguno, repórtelo de inmediato a correosospechoso@bancolombia.com.co
+      \n</p>
       \n<hr style="color: #6c6d71;margin: 12px 67px 0 0;" />
-      \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">Más información en nuestras líneas de atención telefónica:</p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif;line-height: 12px;"> Bogot&aacute; <a href="tel:+5713430000" style="text-decoration:none"><span style="color:#00448c">+57 (1) 343 00 00</span></a> – Medell&iacute;n <a href="tel:+5745109000" style="text-decoration:none"><span style="color:#00448c">+57 (4) 510 90 00</span></a> – Cali <a href="tel:+5725540505" style="text-decoration:none"><span style="color:#00448c">+57 (2) 554 05 05</span></a></p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Barranquilla <a href="tel:+5753618888" style="text-decoration:none"><span style="color:#00448c">+57 (5) 361 88 88</span></a> – Bucaramanga <a href="tel:+5776972525" style="text-decoration:none"><span style="color:#00448c">+57 (7) 697 25 25</span></a> – Cartagena <a href="tel:+5756934400" style="text-decoration:none"><span style="color:#00448c">+57 (5) 693 44 00</span></a></p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Resto del pa&iacute;s <span style="color:#00448c">01800 09 12345</span></p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Sede principal Cra 48 Nro. 26-85</p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Medell&iacute;n – Colombia</p>
-      \n<p style="color:#6c6d71; font-size:12px; margin:5px 43px 20px 0; text-align:left; font-family:Helvetica,Arial, sans-serif;"><a href="#SPONECLICKOPTOUT" name="qLink1" target="_blank" xt="SPONECLICKOPTOUT">Cancelar suscripci&oacute;n</a></p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">
+      \nMás información en nuestras líneas de atención telefónica:
+      \n</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif;line-height: 12px;"> 
+      \nBogot&aacute; 
+      \n<a href="tel:+5713430000" style="text-decoration:none"><span style="color:#00448c">
+      \n+57 (1) 343 00 00
+      \n</span>
+      \n</a>
+      \n – Medell&iacute;n 
+      \n<a href="tel:+5745109000" style="text-decoration:none"><span style="color:#00448c">
+      \n+57 (4) 510 90 00
+      \n</span>
+      \n</a>
+      \n – Cali 
+      \n<a href="tel:+5725540505" style="text-decoration:none">
+      \n<span style="color:#00448c">
+      \n+57 (2) 554 05 05
+      \n</span>
+      \n</a>
+      \n</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> Barranquilla <a href="tel:+5753618888" style="text-decoration:none"><span style="color:#00448c">
+      \n+57 (5) 361 88 88
+      \n</span>
+      \n</a>
+      \n – Bucaramanga 
+      \n<a href="tel:+5776972525" style="text-decoration:none">
+      \n<span style="color:#00448c">
+      \n+57 (7) 697 25 25
+      \n</span>
+      \n</a>
+      \n – Cartagena 
+      \n<a href="tel:+5756934400" style="text-decoration:none">
+      \n<span style="color:#00448c">
+      \n+57 (5) 693 44 00
+      \n</span>
+      \n</a>
+      \n</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> 
+      \nResto del pa&iacute;s 
+      \n<span style="color:#00448c">
+      \n01800 09 12345
+      \n</span>
+      \n</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> 
+      \nSede principal Cra 48 Nro. 26-85
+      \n</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:0 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;"> 
+      \nMedell&iacute;n – Colombia</p>
+      \n<p style="color:#6c6d71; font-size:12px; margin:5px 43px 20px 0; text-align:left; font-family:Helvetica,Arial, sans-serif;">
+      \n<a href="#SPONECLICKOPTOUT" name="qLink1" target="_blank" xt="SPONECLICKOPTOUT">Cancelar suscripci&oacute;n
+      \n</a>
+      \n</p>
     \n</td>
   \n</tr>'
 
@@ -96,8 +144,14 @@ RESPONSIVEHEADER = '\n<table style="width: 100%;" border="0" cellpadding="0" cel
           \n<tr>
             \n<td>
             \n</td>
-            \n<td style="font-family:arial, helvetica, sans-serif; font-size: 0.90em; color:#666666; line-height:1.4; font-weight:lighter; padding-top:20px;">M&aacute;s informaci&oacute;n en nuestras l&iacute;neas de atenci&oacute;n telef&oacute;nica:<br>Bogot&aacute; <span style="color:#274687;">+57(1) 343 00 00</span> - Medell&iacute;n <span style="color:#274687;">+57(4) 510 90 00</span> - Cali <span style="color:#274687;">+57(2) 554 05 05</span>
-              \n<br>Barranquilla <span style="color:#274687;">+57(5) 361 88 88</span> - Bucaramanga <span style="color:#274687;">+57(7) 697 25 25</span> - Cartagena <span style="color:#274687;">+57(5) 693 44 00</span>
+            \n<td style="font-family:arial, helvetica, sans-serif; font-size: 0.90em; color:#666666; line-height:1.4; font-weight:lighter; padding-top:20px;">M&aacute;s informaci&oacute;n en nuestras l&iacute;neas de atenci&oacute;n telef&oacute;nica:<br>Bogot&aacute; <span style="color:#274687;">
+            \n+57(1) 343 00 00</span> - Medell&iacute;n <span style="color:#274687;">
+            \n+57(4) 510 90 00</span> - Cali <span style="color:#274687;">
+            \n+57(2) 554 05 05</span>
+              \n<br>Barranquilla <span style="color:#274687;">
+              \n+57(5) 361 88 88</span> - Bucaramanga <span style="color:#274687;">
+              \n+57(7) 697 25 25</span> - Cartagena <span style="color:#274687;">
+              \n+57(5) 693 44 00</span>
               \n<br>Resto del pa&iacute;s <span style="color:#274687;">018000 09 12345</span>
               \n<br>Sede principal Cra 48 Nro. 26-85<br>Medell&iacute;n - Colombia<br>
               \n<br>
