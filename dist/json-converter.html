@@ -38,21 +38,23 @@
     </div>
     <div class="row bg-mail">
       <div class="col-md-12">
-        <h1>De Excel a Json</h1>
+        <h1>De Excel a Json y de Json a XML</h1>
       </div>
     </div>
-    <div class="container">
+    <div class="container converter">
       <div class="row"><br><br><br>
-        <form id="fileUpload" method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data"></form>
-        <div class="col-md-4">
+        <form id="fileUpload" method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data">
           <label for="payload">Selecciona el archivo a convertir (CSV):</label>
-        </div>
-        <div class="col-md-4">
-          <input id="payload" type="file" name="myFile" accept="text/*">
-        </div>
-        <div class="col-md-4">
+          <input id="payload" type="file" name="myFile" accept="text/*"><br>
           <button id="upload" class="btn btn-info">Convertir</button>
-        </div>
+        </form>
+      </div>
+      <div class="row"><br><br><br>
+        <form id="jsonUpload" method="post" action="http://10.180.6.50:2300/api/jsonToXml" enctype="multipart/form-data">
+          <label for="payloadJSON">Selecciona el archivo a convertir (JSON):</label>
+          <input id="payloadJSON" type="file" name="myFile" accept="*"><br>
+          <button id="uploadJSON" class="btn btn-info">Convertir</button>
+        </form>
       </div>
     </div>
     <script type="text/javascript" src="js/vendor/jquery.min.js"></script>

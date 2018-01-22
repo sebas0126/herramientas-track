@@ -7,16 +7,23 @@ block content
   include ./partials/menu
   .row.bg-mail
     .col-md-12
-      h1 De Excel a Json
-  .container
+      h1 De Excel a Json y de Json a XML
+  .container.converter
     .row
       br
       br
       br
       form#fileUpload(method="post" action="http://10.180.6.50:2300/api/convertFile" enctype="multipart/form-data")
-      .col-md-4
         label(for="payload") Selecciona el archivo a convertir (CSV):
-      .col-md-4
         input#payload(type="file" name="myFile" accept="text/*")
-      .col-md-4
+        br
         button#upload.btn.btn-info Convertir
+    .row
+      br
+      br
+      br
+      form#jsonUpload(method="post" action="http://10.180.6.50:2300/api/jsonToXml" enctype="multipart/form-data")
+        label(for="payloadJSON") Selecciona el archivo a convertir (JSON):
+        input#payloadJSON(type="file" name="myFile" accept="*")
+        br
+        button#uploadJSON.btn.btn-info Convertir

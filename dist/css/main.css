@@ -289,3 +289,8 @@ textarea :focus {
   background-color: #571f4b;
   color: #ffffff;
 }
+
+.converter form {
+  display: flex;
+  justify-content: space-evenly;
+}

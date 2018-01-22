@@ -61,7 +61,7 @@ MASTERCARDHEADER = '\n<tr>
 \n<tr>
     \n<td style="padding: 0 0 0 11px; background-color: #ffffff;">
       \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">
-      \nBancolombia nunca solicitará datos financieros como usuarios, claves, números de tarjetas de crédito con sus códigos de seguridad y fechas de vencimiento mediante vínculos de correo electrónico, si recibe alguno, repórtelo de inmediato a correosospechoso@bancolombia.com.co
+      \nBancolombia nunca le solicitará datos financieros como usuarios, claves, números de tarjetas de crédito con sus  códigos de seguridad y fechas de vencimiento mediante vínculos de correo electrónico o llamadas telefónicas. Para verificar la autenticidad de este correo electrónico puede reenviarlo a <a target="_blank" href="mailto:correosospechoso@bancolombia.com.co">correosospechoso@bancolombia.com.co</a>
       \n</p>
       \n<hr style="color: #6c6d71;margin: 12px 67px 0 0;" />
       \n<p style="color:#6c6d71; font-size:12px; margin:25px 43px 0 0;text-align:left; font-family:Helvetica,Arial, sans-serif; line-height: 15px;">
